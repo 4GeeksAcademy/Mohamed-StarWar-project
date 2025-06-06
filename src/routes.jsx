@@ -1,3 +1,4 @@
+
 // Import necessary components and functions from react-router-dom.
 
 import {
@@ -7,8 +8,9 @@ import {
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
-import { Single } from "./pages/Single";
-import { Demo } from "./pages/Demo";
+import { Character } from "./pages/Character";
+import { Planet } from "./pages/Planet"; 
+import { Vehicile } from "./pages/Vehicile";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,8 +25,9 @@ export const router = createBrowserRouter(
 
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path= "/" element={<Home />} />
-        <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
-        <Route path="/demo" element={<Demo />} />
+        <Route path="/character/:uid" element={ <Character />} />  
+        <Route path="/planet/:uid" element={ <Planet />} />
+        <Route path="/vehicile/:uid" element={ <Vehicile />} />
       </Route>
     )
 );
