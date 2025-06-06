@@ -10,7 +10,7 @@ import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
 import { Character } from "./pages/Character";
 import { Planet } from "./pages/Planet"; 
-import { Vehicile } from "./pages/Vehicile";
+import { Vehicle } from "./pages/Vehicle";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,7 +27,7 @@ export const router = createBrowserRouter(
         <Route path= "/" element={<Home />} />
         <Route path="/character/:uid" element={ <Character />} />  
         <Route path="/planet/:uid" element={ <Planet />} />
-        <Route path="/vehicile/:uid" element={ <Vehicile />} />
+        <Route path="/vehicle/:uid" element={ <Vehicle />} />
       </Route>
     )
 );

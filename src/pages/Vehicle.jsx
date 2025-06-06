@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer";
 import { useParams } from "react-router-dom";
 
-export const Vehicile = () => {
+export const Vehicle = () => {
   // get vehicle UID 
   const { store } = useGlobalReducer();
   const { uid } = useParams();
@@ -26,7 +26,7 @@ export const Vehicile = () => {
   }, [uid, store.VEHICLE_URL]);
 
  
-  if (loading) return <p>Vechicle is Loading...</p>;
+  if (loading) return <p>Vehicle is Loading...</p>;
   if (!vehicle) return <p>Vehicle not found</p>;
 
   return (
@@ -46,7 +46,8 @@ export const Vehicile = () => {
           }}
         />
         <div className="mx-auto">
-          <h1 className="text-center">{vehicle.name}</h1>
+          alt={vehicle?.name || "Vehicle"}
+          <h1 className="text-center">{vehicle?.name || "Unknown"}</h1>
           <p className="text-center">Details</p>
         </div>
       </div>

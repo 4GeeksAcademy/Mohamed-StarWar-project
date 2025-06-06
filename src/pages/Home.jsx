@@ -133,11 +133,11 @@ export const Home = () => {
   return (
     <div className="p-2">
   
-      <h1>Characters</h1>
+      <h1> Caharacter</h1>
       {renderCardList(
         characterData,
         store.CHARACTER_IMAGE_URL,
-        "character-info",
+        "character",
         [
           { label: "Gender", key: "gender" },
           { label: "Hair Color", key: "hair_color" },
@@ -145,24 +145,24 @@ export const Home = () => {
         ]
       )}
 
-      {/* Planets Section */}
+     
       <h1>Planets</h1>
       {renderCardList(
         planetData,
         store.PLANETS_IMAGE_URL,
-        "planet-info",
+        "planet",
         [
           { label: "Population", key: "population" },
           { label: "Terrain", key: "terrain" },
         ]
       )}
 
-      {/* Vehicles Section */}
+     
       <h1>Vehicles</h1>
       {renderCardList(
         vehicleData,
         store.VEHICLE_IMAGE_URL,
-        "vehicle-info",
+        "vehicle",
         [
           { label: "Model", key: "model" },
           { label: "Passengers", key: "passengers" },
